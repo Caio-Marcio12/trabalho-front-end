@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadados essenciais -->
+    <meta name="description" content="Entre em contato com a Arena 61 — localização, Instagram e atendimento pelo WhatsApp para reservas e informações.">
+    <meta name="keywords" content="contato, Arena 61, localização, WhatsApp, Instagram, reservas">
+    <meta name="author" content="Ana Clara Axer, Caio Marcio">
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <title>Arena 61 - Contato</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <img src="img/logo =arena61.webp" alt="Logo Arena 61">
+            </div>
+            <nav>
+                <a href="index.html">SOBRE</a>
+                <a href="servicos.html">SERVIÇOS</a>
+                <a href="contato.html" class="ativo">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="contato">
+        <div class="container">
+            <section class="contato-hero">
+                <h1>Entre em Contato</h1>
+                <p>Estamos aqui para ajudar! Fale conosco através dos nossos canais de atendimento.</p>
+            </section>
+
+            <section class="localizacao">
+                <h2>Onde Estamos</h2>
+
+                <div class="localizacao-wrapper">
+                    <div class="mapa-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6313680591024!2d-48.01481332510137!3d-15.823379884821035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a33b2727d1d4d%3A0x9f831aa9382d5511!2sArena%2061!5e0!3m2!1spt-BR!2sbr!4v1763491059908!5m2!1spt-BR!2sbr"
+                            width="100%"
+                            height="450"
+                            style="border: none; border-radius: 8px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização Arena 61">
+                        </iframe>
+                    </div>
+
+                    <div class="contato-actions">
+                        <div class="contato-card">
+                            <h3>📱 Redes Sociais</h3>
+                            <p>Acompanhe nossas novidades e atualizações</p>
+                            <div class="redes-sociais">
+                                <a href="https://www.instagram.com/arenameiaum/?hl=pt" target="_blank" rel="noopener noreferrer" aria-label="Instagram Arena 61" class="social-link">
+                                    <img src="img/insta.jpeg" alt="Instagram Arena 61">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contato-card">
+                            <h3>💬 WhatsApp</h3>
+                            <p>Envie uma mensagem para esclarecer dúvidas e fazer reservas</p>
+                            <a
+                                href="https://wa.me/5561996866161?text=Olá!%20Gostaria%20de%20mais%20informações"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn-whatsapp"
+                                aria-label="WhatsApp Arena 61">
+                                Fale Conosco no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="ano"></span> Arena 61 — Todos os direitos reservados.</p>
+            <p><a href="index.html">Voltar ao início</a></p>
+        </div>
+    </footer>
+
+    <script src="js/componentes.js"></script>
+    <script>
+        (async function(){
+            await carregarComponente('componentes/header.html', '#header-container');
+            await carregarComponente('componentes/footer.html', '#footer-container');
+            const s = document.createElement('script');
+            s.src = 'script.js';
+            document.body.appendChild(s);
+        })();
+    </script>
+</body>
+</html>

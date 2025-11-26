@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadados essenciais -->
+    <meta name="description" content="Arena 61 — centro esportivo em Brasília: vôlei de praia, futvôlei e aluguel de campo society. Serviços, planos e contato.">
+    <meta name="keywords" content="Arena 61, vôlei de praia, futvôlei, campo society, Brasília, esportes">
+    <meta name="author" content="Ana Clara Axer, Caio Marcio">
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <title>Arena 61 - Sobre</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+  <div class="logo">
+    <img src="img/logo =arena61.webp" alt="Logo Arena 61">
+  </div>
+  <nav>
+    <a href="index.html" class="ativo">SOBRE</a>
+    <a href="servicos.html">SERVIÇOS</a>
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <!-- header será carregado aqui -->
+  <div id="header-container"></div>
+
+  <main id="main-content" class="sobre">
+    <div class="texto">
+        <h1>Arena 61</h1>
+        <p>
+            A Arena 61 é um complexo esportivo moderno e multifuncional situado em Brasília, 
+            que combina prática esportiva, fitness e lazer em um único espaço. Seu conceito é 
+            atender a diversos públicos, desde atletas amadores até famílias em busca de momentos 
+            de diversão e bem-estar.
+        </p>
+        <p>
+            Especializada em esportes de praia, oferece quadras de futevôlei e vôlei, ambientes ideais 
+            para treinos, competições e lazer com amigos. Para os amantes do futebol, também disponibiliza 
+            quadras de futebol society para aluguel.
+        </p>
+        <p>
+            Além das atividades esportivas, é uma excelente opção para comemorações e eventos, 
+            com infraestrutura completa e personalizada.
+        </p>
+    </div>
+    <div class="imagem">
+        <img src="img/Imagem do WhatsApp de 2025-10-08 à(s) 11.56.16_dde6aceb.webp" alt="Imagem da Arena 61">
+    </div>
+  </main>
+
+  <!-- footer será carregado aqui -->
+  <div id="footer-container"></div>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> Arena 61 — Todos os direitos reservados.</p>
+    <p><a href="index.html">Voltar ao início</a></p>
+  </footer>
+
+  <script src="js/componentes.js"></script>
+  <script>
+    (async function(){
+      await carregarComponente('componentes/header.html', '#header-container');
+      await carregarComponente('componentes/footer.html', '#footer-container');
+      const s = document.createElement('script');
+      s.src = 'script.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+/* Mobile first - estilos base para mobile */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Variáveis e tipografia fluida */
+:root{
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --container-padding: 1rem;
+
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}
+
+/* Tipografia fluida */
+html {
+  font-size: 16px;
+}
+@media (min-width: 480px){
+  html { font-size: 16.5px; }
+}
+@media (min-width: 768px){
+  html { font-size: 17px; }
+}
+@media (min-width: 1024px){
+  html { font-size: 18px; }
+}
+
+/* Container base - mobile first */
+.container {
+  width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Containers com larguras máximas em pontos de interrupção */
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+@media (min-width: 1024px) {
+  .container { max-width: 960px; }
+}
+@media (min-width: 1280px) {
+  .container { max-width: 1200px; }
+}
+
+/* Modificadores */
+.container--narrow { max-width: 640px; }
+.container--wide {
+  width: calc(100% - (var(--container-padding) * 2));
+}
+@media (min-width: 1024px){
+  .container--wide { max-width: 1140px; }
+}
+
+/* Layout utilities */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+.col {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+.col--auto {
+  flex: 0 0 auto;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Grades simples (2 / 3 / 4 colunas) */
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+@media (min-width: 768px){ .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+
+.grid-3 { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+@media (min-width: 1024px){ .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+.grid-4 { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+@media (min-width: 1280px){ .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Imagens responsivas */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* Utilities de espaçamento */
+.u-mb-sm { margin-bottom: var(--space-sm); }
+.u-mb-md { margin-bottom: var(--space-md); }
+.u-mb-lg { margin-bottom: var(--space-lg); }
+
+/* Acessibilidade: esconder visualmente mas manter para leitores de tela */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Preferências de usuário: reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* Pequenas melhorias responsivas para o header/mapa/contato */
+@media (min-width: 768px) {
+  .localizacao-wrapper { gap: 1.5rem; }
+}
+@media (max-width: 700px) {
+  .localizacao-wrapper { flex-direction: column; }
+  .localizacao-wrapper iframe,
+  .localizacao-wrapper .contato-actions { height: auto; }
+}
+
+/* Sugestão: botão de ligar / whatsapp fixo em telas pequenas (opcional) */
+.fab-whatsapp {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: none;
+}
+@media (max-width: 700px) {
+  .fab-whatsapp { display: inline-flex; align-items: center; justify-content: center; }
+}
